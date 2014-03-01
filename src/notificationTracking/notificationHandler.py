@@ -43,10 +43,10 @@ class NotificationHandler(Thread):
 
     def _get_notifications(self):
         """Gets notifications from database."""
-        raise NotImplementedError
-        #Tests
-        #self._notifications.append(Notification("Go To Sleep!", 2014, 3, 1, 3, datetime.now().minute + 1))
-        #self._notifications.append(Notification("I am serious!", 2014, 3, 1, 3, datetime.now().minute + 2))
+        #raise NotImplementedError
+        #Test
+        dt = datetime.now()
+        self._notifications.append(Notification("Do math homework!", dt.year, dt.month, dt.day, dt.hour, dt.minute + 1))
 
     def _raise_notification(self, notif):
         """Raises notification in Indicator passed as __init__ parameter.
