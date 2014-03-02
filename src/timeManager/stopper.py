@@ -3,6 +3,8 @@ __author__ = "Kristo Koert"
 from threading import Thread
 from time import sleep
 
+#HowTo: Should this Thread object be kept alive and reused or replaced every time because of performance considerations?
+
 
 class Stopper(Thread):
     """A thread object that is meant to replicate a stopper. Has the ability to stop temporarily and continue. Though

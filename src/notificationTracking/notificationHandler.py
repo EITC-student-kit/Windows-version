@@ -31,7 +31,7 @@ class NotificationHandler(Thread):
         """When thread is started, an endless loop ensues. Constantly checking if any notifications should be raised."""
         while True:
             self._check_notifications()
-            # Performance considerations?
+            # HowTo: Performance impact if less than 10 second sleep?
             sleep(10)
 
     def _check_notifications(self):
@@ -61,7 +61,6 @@ class NotificationHandler(Thread):
     def remove_notification(self):
         """Resets widget status to normal."""
         self._indicator.set_status(STATUS_ACTIVE)
-        self._menu_item.hide()
 
 if __name__ == "__main__":
     pass
