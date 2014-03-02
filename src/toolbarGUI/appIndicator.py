@@ -77,7 +77,7 @@ class AppIndicator(appindicator.Indicator):
             self._stopper.toggle_active()
             self._stopper.start()
         except ThreadError:
-            print "Threading problem in toolbarGUI."
+            print "Threading problem in toolbarGUI"
         finally:
             gtk.threads_enter()
 
@@ -98,6 +98,7 @@ class AppIndicator(appindicator.Indicator):
         :param widget: the widget that triggered this event handler
         :type widget: gtk.MenuItem
         """
+        widget.hide()
         self._notification_handler.remove_notification()
 
     def set_sub_menu_state_tracking(self, is_true=True):

@@ -1,7 +1,8 @@
 package database;
 
 /**
- * Created by kris on 2/25/14.
+ * Created by Kristo Koert on 3/1/14.
  */
 public class DatabaseConnector {
+    //ToDo Implement DatabaseConnectorInterface
 }
