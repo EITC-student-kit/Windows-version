@@ -1,3 +1,3 @@
-__author__ = 'kris'
+__author__ = 'Kristo Koert'
 from .notificationHandler import NotificationHandler
 from .notification import Notification

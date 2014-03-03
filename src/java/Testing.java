@@ -1,6 +1,6 @@
-package javaTesting;
+package java;
 
-import dataTypes.AClass;
+import java.dataTypes.AClass;
 
 /**
  * Created by kris on 2/25/14.

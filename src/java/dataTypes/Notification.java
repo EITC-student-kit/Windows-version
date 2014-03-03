@@ -1,11 +1,11 @@
-package dataTypes;
+package java.dataTypes;
 
 
 import java.sql.Timestamp;
-import database.DataFormatting;
+import java.database.DataFormatting;
 
 /**
- * Created by kris on 3/2/14.
+ * Created by Kristo Koert on 3/2/14.
  */
 public class Notification {
     /**
@@ -18,7 +18,7 @@ public class Notification {
      * Constructor method.
      *
      * @param message Some description of the notification.
-     * @param datetime datetime in format 08:15 02/03/2014 todo: Agree on comfortable format
+     * @param datetime datetime in format 08:15 02/03/2014
      */
    Notification(String message, String datetime) {
        this.message = message;

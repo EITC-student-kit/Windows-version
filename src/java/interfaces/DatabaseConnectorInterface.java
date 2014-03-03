@@ -1,7 +1,7 @@
-package interfaces;
+package java.interfaces;
 
-import dataTypes.AClass;
-import dataTypes.Notification;
+import java.dataTypes.AClass;
+import java.dataTypes.Notification;
 import java.util.ArrayList;
 
 /**
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public interface DatabaseConnectorInterface {
 
     /**
-     * Adds a class description to the correct database table. Checks for duplicates.
+     * Adds a class description to the correct java.database table. Checks for duplicates.
      *
      * @param aClass a AClass instance
      */
@@ -18,18 +18,11 @@ public interface DatabaseConnectorInterface {
 
     /**
      * Adds a notification to the correct table. Checks for time overlap.
-     * Todo how to handle same time notifications? Python appindicator displays most recent notification.
      *
      * @param notif a Notification instance
      */
     public void addNotification(Notification notif);
 
-    /**
-     * Adds a new item to to do table.
-     *
-     * @param toDo a description
-     */
-    public void addToDoItem(String toDo);
 
     /**
      * Returns all the classes the user Attends.
@@ -44,7 +37,4 @@ public interface DatabaseConnectorInterface {
      * @return an ArrayList containing Notification instances
      */
     public ArrayList getNotifications();
-
-
-    //HowTo: Query methods that allow for filtering? Java or SQLite filter?
 }

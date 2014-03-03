@@ -1,2 +1,2 @@
-__author__ = 'kris'
+__author__ = 'Kristo Koert'
 from .stopper import Stopper

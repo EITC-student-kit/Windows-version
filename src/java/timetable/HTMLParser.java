@@ -1,4 +1,4 @@
-package timetable;
+package java.timetable;
 
 /**
  * Created by kris on 2/25/14.

@@ -77,7 +77,7 @@ class AppIndicator(appindicator.Indicator):
             self._stopper.toggle_active()
             self._stopper.start()
         except ThreadError:
-            print "Threading problem in toolbarGUI"
+            print "Threading problem in python.toolbarGUI"
         finally:
             gtk.threads_enter()
 

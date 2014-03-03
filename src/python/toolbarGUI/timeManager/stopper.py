@@ -3,8 +3,6 @@ __author__ = "Kristo Koert"
 from threading import Thread
 from time import sleep
 
-#HowTo: Should this Thread object be kept alive and reused or replaced every time because of performance considerations?
-
 
 class Stopper(Thread):
     """A thread object that is meant to replicate a stopper. Has the ability to stop temporarily and continue. Though
@@ -18,7 +16,7 @@ class Stopper(Thread):
         be used as a display point for the running stopper time.
 
         :param indicator: A place to display stopper time
-        :type indicator:
+        :type indicator: Indicator
         """
         super(Stopper, self).__init__()
         self._indicator = indicator
@@ -40,16 +38,11 @@ class Stopper(Thread):
                 sleep(1)
 
     def toggle_active(self):
-        """Toggles stopper active."""
         self._active = not self._active
 
     def stop_tracking(self):
         """Lets this thread instance finish. After this all references to this instance should be removed."""
         self._exit_thread = True
-
-    def toggle_show_time_in_indicator(self):
-        """Toggle whether the running time should be shown in the appindicator."""
-        self._show_time_in_indicator = not self._show_time_in_indicator
 
     @staticmethod
     def _seconds_to_min(s):

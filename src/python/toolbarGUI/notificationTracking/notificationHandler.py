@@ -31,7 +31,6 @@ class NotificationHandler(Thread):
         """When thread is started, an endless loop ensues. Constantly checking if any notifications should be raised."""
         while True:
             self._check_notifications()
-            # HowTo: Performance impact if less than 10 second sleep?
             sleep(10)
 
     def _check_notifications(self):
@@ -42,7 +41,7 @@ class NotificationHandler(Thread):
                 self._notifications.remove(notif)
 
     def _get_notifications(self):
-        """Gets notifications from database."""
+        """Gets notifications from java.database."""
         #raise NotImplementedError
         #Test
         dt = datetime.now()
