@@ -1,8 +1,9 @@
-package java.dataTypes;
+package javaCc.dataTypes;
 
+
+import javaCc.database.DataFormatting;
 
 import java.sql.Timestamp;
-import java.database.DataFormatting;
 
 /**
  * Created by Kristo Koert on 3/2/14.

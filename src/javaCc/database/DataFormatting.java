@@ -1,4 +1,4 @@
-package java.database;
+package javaCc.database;
 
 import java.sql.Timestamp;
 import java.text.ParseException;

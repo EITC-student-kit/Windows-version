@@ -1,11 +1,12 @@
-package java.dataTypes;
+package javaCc.dataTypes;
+
+import javaCc.database.DataFormatting;
 
 import java.sql.Timestamp;
-import java.database.DataFormatting;
 /**
  * Created by Kristo Koert on 3/2/14.
  */
-public class AClass extends Notification {
+public class AClass {
 
     /**
      * Since this class serves as a sort of container, these are the contents.
@@ -14,7 +15,8 @@ public class AClass extends Notification {
     String className = null;
     String groups = null;
     String type = null;
-    Timestamp datetime = null;
+    Timestamp start_time = null;
+    Timestamp end_time = null;
     String classRoom = null;
     String academician = null;
     boolean attendible;
@@ -26,14 +28,13 @@ public class AClass extends Notification {
      * @param className the name of the class
      * @param groups attending groups separated by comas (e.g. 11, 15)
      * @param type Lecture, Exercise, Practice, Repeat prelim, Reservation, Consultation
-     * @param datetime datetime in format 08:15 02/03/2014
+     * @param start_time start_time in format 08:15 02/03/2014
      * @param classRoom class room where class takes place
      * @param academician the academician(s) format separated with comas
      * @param attendible does the user attend this class or not
      */
-    public AClass(String subjectCode, String className, String groups, String type, String datetime, String classRoom,
+    public AClass(String subjectCode, String className, String groups, String type, String start_time, String end_time, String classRoom,
            String academician, boolean attendible) {
-        super("", "");
         this.subjectCode = subjectCode;
         this.className = className;
         this.groups = groups;
@@ -41,7 +42,8 @@ public class AClass extends Notification {
         this.classRoom = classRoom;
         this.academician = academician;
         this.attendible = attendible;
-        this.datetime = DataFormatting.stringToTimestamp(datetime);
+        this.start_time = DataFormatting.stringToTimestamp(start_time);
+        this.end_time = DataFormatting.stringToTimestamp(end_time);
     }
 
     //HowTo: Account for instances where not all information is available?
@@ -53,7 +55,8 @@ public class AClass extends Notification {
                 "Class name: " + className + "\n" +
                 "Groups: " + groups + "\n" +
                 "Type: " + type + "\n" +
-                "Date and Time: " + datetime + "\n" +
+                "Date and Time: " + start_time + "\n" +
+                "Date and Time: " + end_time + "\n" +
                 "Class room: " + classRoom + "\n" +
                 "Academician: " + academician + "\n" +
                 "Attendible: " + attendible;
