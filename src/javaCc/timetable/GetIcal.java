@@ -25,6 +25,7 @@ public class GetIcal {
             trustManager();
             //Open connection with url
             URLConnection urlC = url.openConnection();
+
             // Copy resource to local file, use remote file
             // if no local file name specified
             InputStream is = url.openStream();

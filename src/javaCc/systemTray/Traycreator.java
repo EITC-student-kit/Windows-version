@@ -1,10 +1,10 @@
 package javaCc.systemTray;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-/**
- * Created by Sten on 3/28/14.
- */
+
 public class Traycreator {
 
     public void createTray() {
@@ -25,6 +25,12 @@ public class Traycreator {
         //Add components to pop-up menu
         popup.add(sisestaUrl);
         popup.add(exitItem);
+        exitItem.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
 
         trayIcon.setPopupMenu(popup);
 
