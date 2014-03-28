@@ -1,5 +1,6 @@
 package javaCc.appWindow;
 
+import javaCc.systemTray.Traycreator;
 import javaCc.timetable.GetIcal;
 import javaCc.timetable.ParseIcal;
 
@@ -11,11 +12,13 @@ import java.io.IOException;
 public class MainWindow {
 
     public static void main(String[] args) throws IOException {
-       String SUrl = "";
+        String SUrl = "https://itcollege.ois.ee/timetable/ical?student_id=2800&key=50139976272982d7897e8225d45e36a5e74870f0";
         GetIcal Gic = new GetIcal();
-        String path =  Gic.grabIcal(SUrl);
+        String path = String.valueOf(Gic.grabIcal(SUrl));
         ParseIcal Pic = new ParseIcal("C:/Users/Sten/Documents/ICal.txt");
         Pic.ParseIc("C:/Users/Sten/Documents/ICal.txt");
-        Pic.toAclass();
+        // Pic.toAclass();
+        Traycreator cTray = new Traycreator();
+        cTray.createTray();
     }
 }
