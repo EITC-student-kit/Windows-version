@@ -7,7 +7,7 @@ import javaCc.timetable.ParseIcal;
 import java.io.IOException;
 
 /**
- * Created by kris on 2/25/14.
+ * Created by ${Kris} on 2/25/14.
  */
 public class MainWindow {
 
