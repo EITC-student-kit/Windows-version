@@ -1,7 +1,7 @@
-package javaCc.interfaces;
+package interfaces;
 
-import javaCc.dataTypes.AClass;
-import javaCc.dataTypes.Notification;
+import dataTypes.AClass;
+import dataTypes.Notification;
 import java.util.ArrayList;
 
 /**

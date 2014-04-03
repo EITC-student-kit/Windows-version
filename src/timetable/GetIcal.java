@@ -1,4 +1,4 @@
-package javaCc.timetable;
+package timetable;
 
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;

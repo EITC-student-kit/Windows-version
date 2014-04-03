@@ -1,4 +1,4 @@
-package javaCc.systemTray;
+package systemTray;
 
 
 import javax.swing.*;

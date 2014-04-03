@@ -1,8 +1,8 @@
-package javaCc.appWindow;
+package appWindow;
 
-import javaCc.systemTray.Traycreator;
-import javaCc.timetable.GetIcal;
-import javaCc.timetable.ParseIcal;
+import systemTray.Traycreator;
+import timetable.GetIcal;
+import timetable.ParseIcal;
 
 import java.io.IOException;
 

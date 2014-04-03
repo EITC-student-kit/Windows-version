@@ -1,6 +1,6 @@
-package javaCc;
+package src;
 
-import javaCc.dataTypes.AClass;
+import dataTypes.AClass;
 
 /**
  * Created by kris on 2/25/14.

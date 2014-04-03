@@ -1,4 +1,4 @@
-package javaCc.timetable;
+package timetable;
 
 import javaCc.dataTypes.AClass;
 

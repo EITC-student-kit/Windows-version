@@ -1,4 +1,4 @@
-package javaCc.database;
+package database;
 
 /**
  * Created by Kristo Koert on 3/1/14.
