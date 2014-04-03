@@ -20,7 +20,7 @@ public class DataFormatting {
         String year = dt.substring(0, 4);
         String month = dt.substring(4, 6);
         String day = dt.substring(6, 8);
-        String hour = dt.substring(9, 11);
+        String hour = String.valueOf(new Integer(dt.substring(9, 11)) + 2);
         String minute = dt.substring(11, 13);
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         try {
