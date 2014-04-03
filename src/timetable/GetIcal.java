@@ -1,4 +1,4 @@
-package timetable;
+package src.timetable;
 
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
@@ -11,13 +11,12 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.StringTokenizer;
 
-/**
- * Created by Sten on 3/18/14.
- */
+
 public class GetIcal {
 
-    public FileOutputStream grabIcal(String Strurl) {
+    public void grabIcal(String Strurl) throws IOException {
         FileOutputStream fos = null;
+        String path = "C:/Users/Sten/Documents/ICal.txt";
         try {
 
             URL url = new URL(Strurl);
@@ -39,7 +38,7 @@ public class GetIcal {
                 assert localFile != null;
                 fos = new FileOutputStream(localFile);
             } else
-                fos = new FileOutputStream("C:/Users/Sten/Documents/ICal.txt");
+                fos = new FileOutputStream(path);
             int oneChar;
             while ((oneChar = is.read()) != -1) {
                 fos.write(oneChar);
@@ -49,7 +48,9 @@ public class GetIcal {
         } catch (IOException e) {
             System.err.println(e.toString());
         }
-        return fos;
+        ParseIcal Pic = new ParseIcal(path);
+        Pic.ParseIc(path);
+
     }
 
     private void trustManager() {

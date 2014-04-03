@@ -1,4 +1,4 @@
-package systemTray;
+package src.systemTray;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -22,8 +22,8 @@ public class Traycreator {
         trayIcon.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 1) {
-                    UrliAken Pic = new UrliAken();
-                    Pic.Liides();
+                    src.systemTray.UrliAken Urliaken = new src.systemTray.UrliAken();
+                    Urliaken.Liides();
                 }
             }
         });
@@ -53,5 +53,6 @@ public class Traycreator {
         } catch (AWTException e) {
             System.out.println("TrayIcon could not be added.");
         }
+
     }
 }

@@ -1,6 +1,6 @@
-package timetable;
+package src.timetable;
 
-import javaCc.dataTypes.AClass;
+import src.dataTypes.AClass;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -10,9 +10,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- * Created by Sten on 3/18/14.
- */
 
 public class ParseIcal {
     private final Path fFilePath;
@@ -79,7 +76,6 @@ public class ParseIcal {
                         a = a.replace(ooz, "");
                         a = a.replace("T", "");
                         a = String.valueOf(a);
-                        a = a.toString();
                         startTimestamp[counter -1]=a;
                         log(startTimestamp[counter -1 ]);
                     }
@@ -107,6 +103,7 @@ public class ParseIcal {
                 name = scanner.nextLine();
             }
         }
+        toAclass();
     }
 
     /**
@@ -161,7 +158,7 @@ public class ParseIcal {
         System.out.println((aObject));
     }
     public ArrayList toAclass(){
-       ArrayList<AClass> classes = new ArrayList<AClass>();
+       ArrayList<AClass> classes = new ArrayList<>();
         for(int i = 0 ; i < counter - 1; i++){
             classes.add(new AClass(subjectCode[i], className[i], attendingGroups[i],
                     classTypes[i],startTimestamp[i], endTimestamp[i],classRooms[i], academicians[i], userAttends ));

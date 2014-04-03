@@ -1,13 +1,11 @@
-package database;
+package src.database;
 
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
-/**
- * Created by kris on 3/2/14.
- */
+
 public class DataFormatting {
 
     /**
