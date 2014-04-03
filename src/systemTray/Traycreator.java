@@ -8,7 +8,7 @@ import java.awt.event.MouseEvent;
 
 
 public class Traycreator {
-
+//
     public void createTray() {
         //Check the SystemTray is supported
         if (!SystemTray.isSupported()) {

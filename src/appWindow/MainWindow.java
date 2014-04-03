@@ -6,7 +6,7 @@ import java.io.IOException;
 
 
 public class MainWindow {
-
+//
     public static void main(String[] args) throws IOException {
         String urlFileLoc="C:/Users/Sten/Documents/URL.txt" ;
         Traycreator cTray = new Traycreator();

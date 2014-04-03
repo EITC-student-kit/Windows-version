@@ -12,6 +12,7 @@ import java.util.Scanner;
 
 
 public class ParseIcal {
+   //
     private final Path fFilePath;
     private final static Charset ENCODING = StandardCharsets.UTF_8;
     String [] subjectCode = new String [1000];

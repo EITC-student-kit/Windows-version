@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 
 public class GetUrl {
-
+//
     public void retrieveURLfromfile(String fileLoc) throws IOException {
         String uRL = "";
         try {

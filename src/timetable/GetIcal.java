@@ -13,7 +13,7 @@ import java.util.StringTokenizer;
 
 
 public class GetIcal {
-
+//
     public void grabIcal(String Strurl) throws IOException {
         FileOutputStream fos = null;
         String path = "C:/Users/Sten/Documents/ICal.txt";
