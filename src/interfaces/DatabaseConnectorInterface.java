@@ -1,12 +1,9 @@
-package interfaces;
+package src.interfaces;
 
-import dataTypes.AClass;
-import dataTypes.Notification;
+import src.dataTypes.AClass;
+import src.dataTypes.Notification;
 import java.util.ArrayList;
 
-/**
- * Created by Kristo Koert on 3/02/14.
- */
 public interface DatabaseConnectorInterface {
 
     /**
