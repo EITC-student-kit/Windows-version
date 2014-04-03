@@ -1,14 +1,16 @@
-package src;
-
 import dataTypes.AClass;
-
+import database.DataFormatting;
 /**
- * Created by kris on 2/25/14.
+ * Created by Kristo Koert on 2/25/14.
  */
 public class Testing {
     public static void main(String[] args) {
-        AClass someClass = new AClass("I012", "Mathematics", "12, 14, 15", "Practice", "2014.03.02 08:15:00","2014.03.02 09:45:00", "314",
-                "Kristiina Kalmistu", true);
-        System.out.println(someClass);
+        System.out.println(DataFormatting.stringToTimestamp("20140306T093000Z"));
+        System.out.println(DataFormatting.stringToTimestamp("20140320T133000Z"));
+        //(String subjectCode, String className, String groups, String type, String start_time,
+        // String end_time, String classRoom, String academician)
+        AClass test_class = new AClass("I089", "Math", "11, 12 ,15", "Practice", "20140320T140000Z",
+                "20140320T153000Z", "314", "Anett Mihkel");
+        System.out.println(test_class);
     }
 }

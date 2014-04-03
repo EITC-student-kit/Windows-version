@@ -1,8 +1,8 @@
 package dataTypes;
 
 import database.DataFormatting;
-
 import java.sql.Timestamp;
+
 /**
  * Created by Kristo Koert on 3/2/14.
  */
@@ -19,7 +19,6 @@ public class AClass {
     Timestamp end_time = null;
     String classRoom = null;
     String academician = null;
-    boolean attendible;
 
     /**
      * Creates a representation of a single class.
@@ -28,27 +27,29 @@ public class AClass {
      * @param className the name of the class
      * @param groups attending groups separated by comas (e.g. 11, 15)
      * @param type Lecture, Exercise, Practice, Repeat prelim, Reservation, Consultation
-     * @param start_time start_time in format 08:15 02/03/2014
+     * @param start_time start_time in format 20140320T133000Z
      * @param classRoom class room where class takes place
      * @param academician the academician(s) format separated with comas
-     * @param attendible does the user attend this class or not
      */
     public AClass(String subjectCode, String className, String groups, String type, String start_time, String end_time, String classRoom,
-           String academician, boolean attendible) {
+           String academician) {
         this.subjectCode = subjectCode;
         this.className = className;
         this.groups = groups;
         this.type = type;
         this.classRoom = classRoom;
         this.academician = academician;
-        this.attendible = attendible;
         this.start_time = DataFormatting.stringToTimestamp(start_time);
         this.end_time = DataFormatting.stringToTimestamp(end_time);
     }
 
-    //HowTo: Account for instances where not all information is available?
-    //Suggestion: Create other constructor methods dependant on how much information is available. (varargs?)
-    //Suggestion: Or use inheritance and improve upon super.ConstructorMethod()?
+    /**
+     * Returns the values of this instance for writing to db.
+     * @return a array of data suitable for writing to db
+     */
+    public Object[] getDatabaseRow() {
+        return new Object[]{subjectCode, className, groups, type, classRoom, academician, start_time, end_time};
+    }
 
     public String toString() {
         return "Subject code: " + subjectCode + "\n" +
@@ -58,7 +59,6 @@ public class AClass {
                 "Date and Time: " + start_time + "\n" +
                 "Date and Time: " + end_time + "\n" +
                 "Class room: " + classRoom + "\n" +
-                "Academician: " + academician + "\n" +
-                "Attendible: " + attendible;
+                "Academician: " + academician + "\n";
     }
 }

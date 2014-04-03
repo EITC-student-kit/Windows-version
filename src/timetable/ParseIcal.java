@@ -1,7 +1,6 @@
 package timetable;
 
-import javaCc.dataTypes.AClass;
-
+import dataTypes.AClass;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
