@@ -1,4 +1,4 @@
-package database;
+package src.database;
 
 import java.sql.Timestamp;
 import java.text.DateFormat;

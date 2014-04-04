@@ -75,17 +75,18 @@ public class ParseIcal {
                 if (Startread & !Endread) {
                     //Timestart
                     if (name.contains(timeStart)) {
-                        startTimestamp[counter - 1] = timestamper(name);
+                        name =  name.replace(timeStart, "");
+                        startTimestamp[counter - 1] =name;
                     }
                     //Timeend
                     if (name.contains(timeEnd)) {
-                        endTimestamp[counter - 1] = timestamper(name);
+                        name = name.replace(timeEnd, "");
+                        endTimestamp[counter - 1] =name ;
                     }
                     //classroom
                     if (name.contains(classRoom)) {
-                        String a = name;
-                        a = a.replace(classRoom, "");
-                        classRooms[counter - 1] = a;
+                        name = name.replace(classRoom, "");
+                        classRooms[counter - 1] = name;
                     }
                     if (name.contains(descR)) {
                         processLine(name);
@@ -146,49 +147,14 @@ public class ParseIcal {
         // log(endingTime[counter]);
     }
 
-    // PRIVATE
-    private static void log(Object aObject) {
-        System.out.println((aObject));
-    }
-
-    private static String timestamper(String name) {
-        String timeStart = "DTSTART:";
-        String ooz = "00Z";
-        String timeEnd = "DTEND:";
-        String minutid = "", tund = "", p2ev = "", kuu = "", aasta = "";
-        String timestamp = "";
-        String a = name;
-        if (name.contains(timeStart)) {
-            a = a.replace(timeStart, "");
-        }
-        if (name.contains(timeEnd)) {
-            a = a.replace(timeEnd, "");
-        }
-        a = a.replace(ooz, "");
-        a = a.replace("T", "");
-        //201403200800
-        aasta = a.substring(0, 4);
-        kuu = a.substring(4, 6);
-        p2ev = a.substring(6, 8);
-        tund = a.substring(8,10);
-        int temptund = Integer.parseInt(tund);
-        temptund = temptund +2;
-        tund = Integer.toString(temptund);
-        minutid = a.substring(10,12);
-        // 08:15 02/03/2014
-        timestamp =tund + ":" +minutid + " " + p2ev + "/" + kuu + "/"+ aasta ;
-        log(timestamp);
-        return timestamp;
-    }
-
     public ArrayList toAclass() {
         ArrayList<AClass> classes = new ArrayList<>();
         for (int i = 0; i < counter - 1; i++) {
             classes.add(new AClass(subjectCode[i], className[i], attendingGroups[i],
-                    classTypes[i], startTimestamp[i], endTimestamp[i], classRooms[i], academicians[i], userAttends));
+                    classTypes[i], startTimestamp[i], endTimestamp[i], classRooms[i], academicians[i]));
 
         }
-        System.out.print(classes+ "\n");
+        System.out.println(classes);
         return classes;
 
     }

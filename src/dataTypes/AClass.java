@@ -1,6 +1,6 @@
-package dataTypes;
+package src.dataTypes;
 
-import database.DataFormatting;
+import src.database.DataFormatting;
 import java.sql.Timestamp;
 
 /**

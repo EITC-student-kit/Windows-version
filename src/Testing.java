@@ -1,5 +1,7 @@
-import dataTypes.AClass;
-import database.DataFormatting;
+package src;
+
+import src.dataTypes.AClass;
+import src.database.DataFormatting;
 /**
  * Created by Kristo Koert on 2/25/14.
  */
