@@ -15,14 +15,14 @@ public class Traycreator {
             System.out.println("SystemTray is not supported");
             return;
         }
-        Image image = Toolkit.getDefaultToolkit().getImage("C:/Users/Sten/IdeaProjects/Cc/src/javaCc/systemTray/images/logo.jpg");
+        Image image = Toolkit.getDefaultToolkit().getImage("C:/Users/Sten/IdeaProjects/Windows-version/src/systemTray/Tray_logo.jpg");
         final PopupMenu popup = new PopupMenu();
         final TrayIcon trayIcon = new TrayIcon(image, "CC tray", popup);
         final SystemTray tray = SystemTray.getSystemTray();
         trayIcon.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
                 if (e.getClickCount() == 1) {
-                    src.systemTray.UrliAken Urliaken = new src.systemTray.UrliAken();
+                    UrliAken Urliaken = new UrliAken();
                     Urliaken.Liides();
                 }
             }

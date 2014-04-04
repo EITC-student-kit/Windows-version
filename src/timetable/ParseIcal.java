@@ -127,7 +127,11 @@ public class ParseIcal {
         attendingGroups[counter - 1] = part2;
         //Õppejõud
         part5 = part5.replace("Õppejõud: ", "");
+        if(part5.equals("")){
+            part5 = "empty";
+        }
         academicians[counter - 1] = part5;
+
         //AineTüüp
         part6 = part6.replace("Tüüp: ", "");
         classTypes[counter - 1] = part6;
